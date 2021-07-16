@@ -1,0 +1,73 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.caraousel {
+  height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+
+}
+.caraousel .caraousel-item {
+  display: none;
+}
+.caraousel .caraousel-hidden {
+  display: none;
+}
+.caraousel-item img {
+  width: 100%;
+  
+  height:100vh;
+  object-fit: cover;
+  
+}
+.caraousel .caraousel-visible {
+  display: block;
+  animation: move 0.5s;
+  position: relative;
+  z-index: -2;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 1em;
+}
+button {
+  padding: 10px;
+  border: 0;
+  outline: none;
+  border-radius: 50%;
+  background-color: transparent;
+  appearance: none;
+}
+button i {
+
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  color:white;
+  background-color: black;
+  font-size:3rem;
+  border-radius: 50%;
+}
+
+@keyframes move {
+  0% {
+    opacity: 0;
+    transform:translateX(-50%);
+    
+  }
+  100% {
+    opacity: 1;
+    transform:translateX(0%);
+  
+  }
+}
